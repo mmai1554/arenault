@@ -1,0 +1,52 @@
+/************************
+  Gallery options styles
+************************/
+#ar-gallery-options section {
+  padding: 12px 0; }
+
+#ar-gallery-options .spinner {
+  float: none;
+  vertical-align: -5px; }
+
+#ar-gallery-options .gallery-name {
+  display: inline-block;
+  margin-right: 12px; }
+
+#ar-gallery-options .image-list-item {
+  align-items: center;
+  display: flex;
+  margin: 5px 0; }
+  #ar-gallery-options .image-list-item:first-of-type .image-list-item-up,
+  #ar-gallery-options .image-list-item:last-of-type .image-list-item-down {
+    opacity: 0.5;
+    pointer-events: none; }
+  #ar-gallery-options .image-list-item > * {
+    margin-right: 15px !important; }
+
+#ar-gallery-options .image-list-item-img {
+  background-color: #222;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  height: 90px;
+  width: 160px; }
+
+#ar-gallery-options .image-list-item-caption {
+  width: 300px; }
+
+#ar-gallery-options .image-list-item-up,
+#ar-gallery-options .image-list-item-down {
+  display: inline-block;
+  margin: 0 2px;
+  padding: 4px !important; }
+  #ar-gallery-options .image-list-item-up .dashicons,
+  #ar-gallery-options .image-list-item-down .dashicons {
+    vertical-align: -2px; }
+
+#ar-gallery-options .image-list-item-delete,
+#ar-gallery-options .gallery-delete {
+  color: #a00; }
+  #ar-gallery-options .image-list-item-delete:hover,
+  #ar-gallery-options .gallery-delete:hover {
+    color: red; }
