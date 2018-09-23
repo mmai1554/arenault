@@ -13,6 +13,14 @@ $screen-xs-max: $screen-sm-min - 1;
     @media (min-width: $screen-lg-min) {
       @content;
     }
+  } @else if $point == ip5port {
+    @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) {
+      @content;
+    }
+  } @else if $point == ip5land {
+    @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: landscape) {
+      @content;
+    }
   } @else if $point == res {
     @media (max-width: $screen-md-min) {
       @content;

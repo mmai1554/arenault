@@ -23,6 +23,7 @@ body {
   color: $black_2;
   font: 300 1rem/normal Roboto, sans-serif;
   margin: 0;
+  -webkit-text-size-adjust: 100%;
 }
 
 * {
@@ -180,6 +181,13 @@ nav {
   @include bp(tablet) {
     margin: 48px auto;
   }
+  @include bp(ip5land) {
+    margin:auto 30px;
+    &,p,a,li {
+      font-size: 12px !important;
+      line-height: 1.3em;
+    }
+  }
 
 }
 
@@ -306,7 +314,7 @@ nav {
 }
 
 .cv {
-  max-width: 360px;
+  // max-width: 360px;
   @include bp(res) {
     margin: 0 auto;
     width:auto;
@@ -316,6 +324,7 @@ nav {
 input[type="text"], input[type="email"], input[type="submit"], textarea {
   border:1px solid $black_1;
   padding:2px;
+  border-radius: 0;
 }
 
 //dont show cv:
