@@ -17,7 +17,7 @@ $break-1824: 114em;
 /*------------------------------------*\
     breakpoint mixin
 \*------------------------------------*/
-@mixin bp($point) {
+@mixin bpe($point) {
 
   @if $point == tablet {
     @media (min-width: $break-768) { @content; }

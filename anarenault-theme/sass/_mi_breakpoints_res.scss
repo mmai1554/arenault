@@ -17,6 +17,10 @@ $screen-xs-max: $screen-sm-min - 1;
     @media (max-width: $screen-md-min) {
       @content;
     }
+  } @else if $point == smartlandscape {
+    @media (min-device-width: 568px) and (max-device-width: 767px) {
+      @content;
+    }
   } @else if $point == laptop {
     @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
       @content;

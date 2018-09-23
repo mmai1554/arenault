@@ -8,6 +8,8 @@ Version: 1.0
 Text Domain: anarenault-theme
 */
 @import "mi_breakpoints_res";
+@import "mi_breakpoints_exact";
+@import "_mi_mixins.scss";
 @import url("https://fonts.googleapis.com/css?family=Barlow:300,500");
 
 $black_1: rgba(0, 0, 0, 0.4);
@@ -130,6 +132,9 @@ nav {
       text-align: center;
       display: block;
     }
+    a:hover {
+      margin-left:auto;
+    }
   }
 }
 
@@ -163,14 +168,19 @@ nav {
 }
 
 .post .entry-content, .page .entry-content {
-  font-size: 12px !important;
-  line-height: 1.3em;
+  &,p,a,li {
+    font-size: 12px !important;
+    line-height: 1.3em;
+  }
   margin-top: 48px;
   max-width: 500px;
-  @include bp(tablet) {
-    font-size: 0.8rem !important;
-    margin: 48px auto 0px;
+  @include bp(smartlandscape) {
+    margin:auto 30px;
   }
+  @include bp(tablet) {
+    margin: 48px auto;
+  }
+
 }
 
 .post {
@@ -297,19 +307,22 @@ nav {
 
 .cv {
   max-width: 360px;
-  margin: 0 auto;
   @include bp(res) {
+    margin: 0 auto;
     width:auto;
   }
 }
 
+input[type="text"], input[type="email"], input[type="submit"], textarea {
+  border:1px solid $black_1;
+  padding:2px;
+}
 
-
-//@media only screen and (max-device-width: 320px) and (orientation: portrait) {
-//  .cv {
-//    width: auto;
-//  }
-//}
-
+//dont show cv:
+.post-85 header {
+  @include bp(res) {
+    @include hide_from_screen();
+  }
+}
 
 
